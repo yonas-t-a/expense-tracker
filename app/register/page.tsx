@@ -112,7 +112,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
+            className="w-full rounded-md bg-black px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
           >
             {loading ? "Creating account..." : "Sign Up"}
           </button>
@@ -120,7 +120,7 @@ export default function RegisterPage() {
 
         <div className="mt-6 text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-blue-600 hover:text-blue-500">
+          <Link href="/login" className="font-medium text-black hover:text-blue-500">
             Sign in
           </Link>
         </div>
