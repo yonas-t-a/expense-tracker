@@ -2,16 +2,21 @@
   "name": "expense-tracker",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+ "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "preview": "npm run build && npm run start",
     "db:push": "prisma db push",
     "db:generate": "prisma generate",
     "db:studio": "prisma studio",
     "db:seed": "tsx prisma/seed.ts",
-    "db:reset": "rm -f dev.db && prisma db push && tsx prisma/seed.ts"
+    "db:reset": "rm -f dev.db && prisma db push && tsx prisma/seed.ts",
+    "db:prod:push": "NODE_ENV=production prisma db push",
+    "db:prod:seed": "NODE_ENV=production tsx prisma/seed.ts",
+    "type-check": "tsc --noEmit",
+    "test:prod": "npm run build && npm run start & sleep 5 && node scripts/check-production.js"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
