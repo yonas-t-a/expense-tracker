@@ -14,7 +14,7 @@
     "db:reset": "rm -f dev.db && prisma db push && tsx prisma/seed.ts"
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^5.0.0",
     "bcrypt": "^6.0.0",
     "better-sqlite3": "^12.6.2",
     "lucide-react": "^0.563.0",
